@@ -9,7 +9,7 @@ resource "aws_lambda_function" "ti_lambda" {
   
     environment {
     variables = {
-      DISCORD_WEBHOOK = "https://discord.com/api/webhooks/1349151942013616331/bKufIjasGu4uuYQksspQhwqsEcVoQWq5pmQhJJ_pGyWa0ccuAPBAvpvi-9YETxgrJRn7"
+      DISCORD_WEBHOOK = var.lambda_config.discord_webhook
     }
   }
 
