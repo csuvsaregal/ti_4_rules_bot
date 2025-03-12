@@ -51,6 +51,60 @@ resource "aws_lambda_permission" "allow_cloudwatch" {
   source_arn    = aws_cloudwatch_event_rule.lambda_schedule.arn
 }
 
+
+resource "aws_iam_role_policy" "s3_read_access" {
+  name = "lambda_s3_read_policy"
+  role = aws_iam_role.lambda_exec.id
+
+  policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Action = [
+          "s3:GetObject",
+          "s3:ListBucket"
+        ]
+        Effect   = "Allow"
+        Resource = [
+          "arn:aws:s3:::${var.ti4-rules}",
+          "arn:aws:s3:::${var.ti4-rules}/*"
+        ]
+      }
+    ]
+  })
+}
+
+# Add this variable definition
+variable "ti4-rules" {
+  description = "Name of the S3 bucket to grant read access to"
+  type        = string
+}
+
+# Existing IAM role (updated with new policy attachment)
+resource "aws_iam_role" "lambda_exec" {
+  name = "lambda_exec_role"
+
+  assume_role_policy = jsonencode({
+    Version = "2012-10-17"
+    Statement = [
+      {
+        Action = "sts:AssumeRole"
+        Effect = "Allow"
+        Principal = {
+          Service = "lambda.amazonaws.com"
+        }
+      }
+    ]
+  })
+}
+
+# Existing basic execution policy attachment remains
+resource "aws_iam_role_policy_attachment" "lambda_basic_execution" {
+  role       = aws_iam_role.lambda_exec.name
+  policy_arn = "arn:aws:iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+}
+
+
 resource "aws_iam_role_policy" "lambda_logs" {
   name = "lambda_logging_policy"
   role = aws_iam_role.lambda_exec.id
