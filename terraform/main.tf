@@ -18,19 +18,6 @@ resource "aws_lambda_function" "ti_lambda" {
   }
 }
 
-resource "aws_iam_role" "lambda_exec" {
-  name = "lambda_execution_role_ti"
-  
-  assume_role_policy = jsonencode({
-    Version = "2012-10-17"
-    Statement = [{
-      Effect = "Allow"
-      Principal = { Service = "lambda.amazonaws.com" }
-      Action = "sts:AssumeRole"
-    }]
-  })
-}
-
 resource "aws_cloudwatch_event_rule" "lambda_schedule" {
   name                = "four-hour-lambda-trigger"
   description         = "Trigger Lambda every 4 hours"
@@ -80,21 +67,16 @@ variable "ti4-rules" {
   type        = string
 }
 
-# Existing IAM role (updated with new policy attachment)
 resource "aws_iam_role" "lambda_exec" {
-  name = "lambda_exec_role"
-
+  name = "lambda_execution_role_ti"
+  
   assume_role_policy = jsonencode({
     Version = "2012-10-17"
-    Statement = [
-      {
-        Action = "sts:AssumeRole"
-        Effect = "Allow"
-        Principal = {
-          Service = "lambda.amazonaws.com"
-        }
-      }
-    ]
+    Statement = [{
+      Effect = "Allow"
+      Principal = { Service = "lambda.amazonaws.com" }
+      Action = "sts:AssumeRole"
+    }]
   })
 }
 
