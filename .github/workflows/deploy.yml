@@ -60,5 +60,5 @@ jobs:
       working-directory: terraform
 
     - name: Terraform Apply
-      run: terraform apply -auto-approve -input=false -var="environment=${{ env.ENVIRONMENT }}"
+      run: terraform apply -auto-approve
       working-directory: terraform
