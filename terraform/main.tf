@@ -65,6 +65,7 @@ resource "aws_iam_role_policy" "s3_read_access" {
 variable "ti4-rules" {
   description = "Name of the S3 bucket to grant read access to"
   type        = string
+  default     = "ti4-rules"
 }
 
 resource "aws_iam_role" "lambda_exec" {
