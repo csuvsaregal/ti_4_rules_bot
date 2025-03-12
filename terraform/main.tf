@@ -6,7 +6,13 @@ resource "aws_lambda_function" "ti_lambda" {
   runtime          = var.lambda_config.runtime
   source_code_hash = filebase64sha256("${path.module}/../lambdas/${var.lambda_config.zip_name}")
   layers           = ["arn:aws:lambda:us-east-1:336392948345:layer:AWSSDKPandas-Python313:1"]
-    
+  
+    environment {
+    variables = {
+      DISCORD_WEBHOOK = "https://discord.com/api/webhooks/1349151942013616331/bKufIjasGu4uuYQksspQhwqsEcVoQWq5pmQhJJ_pGyWa0ccuAPBAvpvi-9YETxgrJRn7"
+    }
+  }
+
     lifecycle {
     create_before_destroy = true
   }
