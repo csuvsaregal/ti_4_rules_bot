@@ -4,5 +4,6 @@ variable "lambda_config" {
     runtime       = string
     handler       = string
     function_name = string
+    discord_webhook = string
   })
 }
