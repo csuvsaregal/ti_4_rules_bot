@@ -1,0 +1,5 @@
+{
+    "rule_number": 14,
+    "rule_name": "BLOCKADED",
+    "rule_text": "A player's unit with 'Production' is blockaded if it is in a system that contains another player's ships but does not contain any of his own ships.   14.1 A player cannot use a blockaded unit to produce ships; he can still use a blockaded unit to produce ground forces.         Producing Units       Ships"
+}

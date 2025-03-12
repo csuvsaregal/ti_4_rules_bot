@@ -1,0 +1,5 @@
+{
+    "rule_number": 68,
+    "rule_name": "SPACE DOCK",
+    "rule_text": "A space dock is a structure that allows players to produce units.   68.1 Each space dock has a 'Production' ability that indicates the number of units it can produce.   68.2 The primary way in which players acquire space docks is by resolving either the primary or secondary abilities of the 'Construction' strategy card.   68.3 Space docks are placed on planets. Each planet can have a maximum of one space dock.   68.4 If a player's space dock is ever on a planet that contains a unit that belongs to another player and does not contain any of his own ground forces, that space dock is destroyed.    The Clan of Saar 'Floating Factory' faction-specific space dock is destroyed when it is blockaded; that is to say, when it is in a system with another player's ships and none of the Clan of Saar's ships.          Construction       Producing Units       Structures"
+}

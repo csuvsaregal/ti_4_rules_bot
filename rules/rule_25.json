@@ -1,0 +1,5 @@
+{
+    "rule_number": 25,
+    "rule_name": "COST (ATTRIBUTE)",
+    "rule_text": "Cost is an attribute of some units that is presented on those units' faction sheets and technology cards. A unit's cost determines the number of resources a player must spend to produce that unit.   25.1 To produce a unit, a player must spend a number of resources equal to or greater than the cost of the unit he is producing.   25.2 If the cost is accompanied by two icons-typically forfighters and ground forces-a player produces two of that unit for that cost.   25.3 If a unit does not have a cost, it cannot be produced.    Structures do not have costs and are usually placed by resolving the 'Construction' strategy card.          Producing Units       Resources"
+}

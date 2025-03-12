@@ -1,0 +1,5 @@
+{
+    "rule_number": 35,
+    "rule_name": "GAME BOARD",
+    "rule_text": "The game board consists of all system tiles in play.   35.1 The game board consists of all system tiles that were placed during setup, even if the edges of those tiles do not touch any other system tiles, such as the Ghosts of Creuss' home system.         System Tiles"
+}

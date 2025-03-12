@@ -1,0 +1,5 @@
+{
+    "rule_number": 45,
+    "rule_name": "LEADERSHIP (STRATEGY CARD)",
+    "rule_text": "The 'Leadership' strategy card allows players to gain command tokens. This card's initiative value is '1.'   45.1 During the action phase, if the active player has the 'Leadership' strategy card, he can perform a strategic action to resolve that card's primary ability.   45.2 To resolve the primary ability on the 'Leadership' strategy card, the active player gains three command tokens. Then, he can spend any amount of his influence to gain one command token for every three influence he spends.   45.3 After the active player resolves the primary ability of the 'Leadership' strategy card, each other player, beginning with the player to the left of the active player and proceeding clockwise, may spend any amount of influence to gain one command token for every three influence he spends.   45.4 When a player gains command tokens, he places each token on his command sheet in the pool of his choice.         Command Sheet       Command Tokens       Influence       Initiative Order       Strategic Action       Strategy Card"
+}

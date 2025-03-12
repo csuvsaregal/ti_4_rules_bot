@@ -1,0 +1,5 @@
+{
+    "rule_number": 13,
+    "rule_name": "ATTACKER",
+    "rule_text": "During combat, the active player is the attacker.         Defender       Invasion       Space Combat"
+}

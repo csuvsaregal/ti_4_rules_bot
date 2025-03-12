@@ -1,0 +1,5 @@
+{
+    "rule_number": 63,
+    "rule_name": "REROLLS",
+    "rule_text": "Some game effects instruct a player to reroll dice.   63.1 When a die is rerolled, its new result is used instead of its previous result.   63.2 The same ability cannot be used to reroll the same die multiple times, but multiple abilities can be used to reroll a single die.   63.3 Die rerolls must occur immediately after rolling the dice, before other abilities or dice rolls are resolved.         Abilities       Action Cards       Ground Combat       Space Combat"
+}

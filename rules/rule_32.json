@@ -1,0 +1,5 @@
+{
+    "rule_number": 32,
+    "rule_name": "EXHAUSTED",
+    "rule_text": "Some cards can be exhausted. A player cannot resolve abilities or spend the resources or influence of an exhausted card.   32.1 To exhaust a card, a player flips the card facedown.   32.2 During the 'Ready Cards' step of the status phase, each player readies all of his exhausted cards by flipping them faceup.   32.3 A player exhausts his planet cards to spend either the resources or influence on that card.   32.4 Abilities, including some found on technology cards, may instruct a player to exhaust a card to resolve those abilities. If a card is already exhausted, it cannot be exhausted again.    Passive abilities on an exhausted card are still in effect while that card is exhausted.    32.5 After a player performs a strategic action, he exhausts the strategy card that corresponds to that action.         Influence       Planets       Resources       Status Phase"
+}

@@ -1,0 +1,5 @@
+{
+    "rule_number": 56,
+    "rule_name": "PLANETARY SHIELD (UNIT ABILITY)",
+    "rule_text": "Units cannot use the 'Bombardment' ability against a planet that contains a unit that has the 'Planetary Shield' ability.   56.1 The 'Planetary Shield' ability does not prevent a planet from being affected by the 'X-89 Bacterial Weapon' technology.   56.2 The 'Planetary Shield' ability prevents an L1Z1X player from using his 'Harrow' faction ability.   56.3 If a war sun is in a system with any number of other players' units that have the 'Planetary Shield' ability, those units are treated as if they do not have that ability.         Units treated as if they do not have a 'Planetary Shield' ability cannot use the 'Magen Defense Grid' technology.       A war sun can use its 'Bombardment' ability against planets that contain units that have the 'Planetary Shield' ability.           Bombardment"
+}

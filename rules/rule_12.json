@@ -1,0 +1,5 @@
+{
+    "rule_number": 12,
+    "rule_name": "ATTACH",
+    "rule_text": "Some game effects instruct a player to attach a card to a planet card. A card that is attached to a planet card modifies that planet card in some way.   12.1 To attach a card to a planet card, a player places the card with the attach effect partially underneath the planet card.   12.2 If a player gains or loses control of planet that contains a card with an attach effect, the attached card stays with that planet.    The attached card maintains its exhausted or readied state          Agenda Card       Control       Planets"
+}

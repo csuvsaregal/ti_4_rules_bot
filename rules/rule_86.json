@@ -1,0 +1,5 @@
+{
+    "rule_number": 86,
+    "rule_name": "UNIT UPGRADES",
+    "rule_text": "A unit upgrade is a type of technology card.   86.1 Unit upgrades share a name with a unit that is printed on a player's faction sheet, but have a higher roman numeral. For example, a player's 'Carrier I' unit is upgraded by the unit upgrade technology 'Carrier II.'    See 'Technology' for rules regarding the Nekro Virus and unit upgrades.    86.2 Players place unit upgrades they gain faceup on their faction sheets, covering the unit that shares a name with that upgrade card.   86.3 The white arrows next to an attribute on a faction sheet indicate that the attribute will improve when the unit is upgraded.   86.4 After a player gains a unit upgrade card, each of that player's units that correspond to that upgrade card is treated as having the attributes and abilities printed on that upgrade card. Any previous attributes of that unit, such as the one printed on that player's faction sheet, are ignored.         Technology"
+}

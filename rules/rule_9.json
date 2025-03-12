@@ -1,0 +1,5 @@
+{
+    "rule_number": 9,
+    "rule_name": "ANOMALIES",
+    "rule_text": "An anomaly is a system tile that has unique rules.   9.1 An anomaly is identified by a red border located on the tile's corners.   9.2 There are four types of anomalies: asteroid fields, nebulae, supernovas, and gravity rifts.   9.3 Each type of anomaly is identified by its art, see the Rule Reference manual.         Asteroid Field       Gravity Rift       Movement       Nebula       Supernova       System Tiles"
+}

@@ -1,0 +1,5 @@
+{
+    "rule_number": 39,
+    "rule_name": "GROUND FORCES",
+    "rule_text": "A ground force is a type of unit. All infantry units in the game are ground forces. Some races have unique infantry units.   39.1 Ground forces are always either on planets or being transported by ships that have a capacity value.   39.2 Ground forces being transported by a ship are placed in asystem's space area along with the ship that is transporting   them.   39.3 There is no limit to the number of ground forces a player can have on a planet.         Capacity       Control       Infantry Tokens       Transport       Units"
+}

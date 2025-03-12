@@ -1,0 +1,5 @@
+{
+    "rule_number": 29,
+    "rule_name": "DESTROYED",
+    "rule_text": "Various game effects can cause a unit to be destroyed. When a player's unit is destroyed, it is removed from the game board and returned to his reinforcements.   29.1 When a player assigns hits that were produced against his units, he chooses a number of his units to be destroyed equal to the number of hits produced against his units.   29.2 Forcing a player to remove a unit from the board by reducing the number of command tokens in his fleet pool does not count as destroying a unit.         Anti-Fighter Barrage       Bombardment       Space Cannon       Space Combat       Sustain Damage"
+}

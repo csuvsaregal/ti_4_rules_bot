@@ -1,0 +1,5 @@
+{
+    "rule_number": 16,
+    "rule_name": "CAPACITY (ATTRIBUTE)",
+    "rule_text": "Capacity is an attribute of some units that is presented on those units' faction sheets and technology cards.   16.1 A unit's capacity value indicates the maximum combined number of fighters and ground forces that it can transport.   16.2 The combined capacity values of a player's ships in a system determine the number of fighters and ground forces he can have in that system's space area.   16.3 If a player has more fighters and ground forces in the space area of a system than the total capacity of his ships in that system, he must destroy the excess units of his choice.         Ground forces on planets do not count against capacity.       A player’s fighters and ground forces do not count against capacity during combat. At the end of combat, he must destroy the excess units     16.4 Fighters and ground forces are not assigned to specific ships, except while they are being transported.         Movement       Capacity       Transport"
+}

@@ -1,0 +1,5 @@
+{
+    "rule_number": 77,
+    "rule_name": "SYSTEM TILES",
+    "rule_text": "A system tile represents an area of the galaxy. Players place system tiles during setup to create the game board.   77.1 The back of each system tile is colored green, blue, or red.   77. 2 System tiles with a green-colored back are home systems. Each home system is unique to one of the game's factions.26   77. 3 System tiles with a blue-colored back each contain one or more planets.   77.4 System tiles with a red-colored back are anomalies or are systems that do not contain planets.   77. 5 Planets are located in systems. Ground forces and structures are always placed on planets.   77.6 Any area on a system tile that is not a planet is space. Ships are always placed in the space area.         Adjacency       Anomalies       Planets       Ships       Wormholes"
+}

@@ -1,0 +1,64 @@
+name: Deploy to QA
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  TF_VERSION: 1.5.7
+  AWS_REGION: us-east-1
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up Terraform
+      uses: hashicorp/setup-terraform@v3
+      with:
+        terraform_version: ${{ env.TF_VERSION }}
+
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v4
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ env.AWS_REGION }}
+
+    - name: Zip Lambda code
+      run: |
+        TIMESTAMP=$(date -u +"%Y%m%d%H%M%S")
+        ZIP_NAME="lambda${TIMESTAMP}.zip"
+        cd lambdas
+        zip -r $ZIP_NAME .
+        echo "Created $ZIP_NAME"
+        echo "ZIP_NAME=$ZIP_NAME" >> $GITHUB_ENV
+        ls -l
+        cd ..
+        sed -i "s/\"lambda_config.zip_name\": \".*\"/\"lambda_config.zip_name\": \"$ZIP_NAME\"/" terraform/terraform_config.auto.tfvars.json
+
+    - name: Install jq
+      run: sudo apt-get install -y jq
+      
+    - name: Update config with jq
+      run: |
+        jq --arg zip "${{ env.ZIP_NAME }}" '.lambda_config.zip_name = $zip' terraform/terraform_config.auto.tfvars.json > tmp.json
+        mv tmp.json terraform/terraform_config.auto.tfvars.json
+        echo $ZIP_NAME
+        cat terraform/terraform_config.auto.tfvars.json
+
+    - name: Terraform Init
+      run: terraform init
+      working-directory: terraform
+
+    - name: Terraform Plan
+      run: terraform plan -input=false
+      working-directory: terraform
+
+    - name: Terraform Apply
+      run: terraform apply -auto-approve -input=false -var="environment=${{ env.ENVIRONMENT }}"
+      working-directory: terraform
