@@ -27,9 +27,12 @@ def lambda_handler(event, context):
         message = re.sub(r'\.[^.]*$', '.', message)
         message = f"{message}\n\n"
 
+        print(f"Sending rule to Discord: {rule_data['rule_name']}"
+
         # Send to Discord
         payload = {'content': message}
-        requests.post(WEBHOOK_URL, json=payload)
+        response = requests.post(WEBHOOK_URL, json=payload)
+        print(response.text)
         
         return {'statusCode': 200, 'body': 'Message sent'}
     
