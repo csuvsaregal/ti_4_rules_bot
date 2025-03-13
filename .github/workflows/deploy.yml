@@ -9,6 +9,7 @@ env:
   TF_VERSION: 1.5.7
   AWS_REGION: us-east-1
 
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -45,8 +46,13 @@ jobs:
       run: sudo apt-get install -y jq
       
     - name: Update config with jq
+      env:
+        DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
       run: |
-        jq --arg zip "${{ env.ZIP_NAME }}" '.lambda_config.zip_name = $zip' terraform/terraform_config.auto.tfvars.json > tmp.json
+        jq --arg zip "${{ env.ZIP_NAME }}" \
+        --arg webhook "$DISCORD_WEBHOOK" \
+        '.lambda_config.zip_name = $zip | .lambda_config.discord_webhook = $webhook' \
+        terraform/terraform_config.auto.tfvars.json > tmp.json
         mv tmp.json terraform/terraform_config.auto.tfvars.json
         echo $ZIP_NAME
         cat terraform/terraform_config.auto.tfvars.json
@@ -60,5 +66,10 @@ jobs:
       working-directory: terraform
 
     - name: Terraform Apply
+      env:
+        TF_VAR_lambda_config: |
+          {
+            "discord_webhook": "${{ secrets.DISCORD_WEBHOOK }}"
+          }
       run: terraform apply -auto-approve
       working-directory: terraform
