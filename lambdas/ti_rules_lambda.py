@@ -27,7 +27,7 @@ def lambda_handler(event, context):
         message = re.sub(r'\.[^.]*$', '.', message)
         message = f"{message}\n\n"
 
-        print(f"Sending rule to Discord: {rule_data['rule_name']}"
+        print(f"Sending rule to Discord: {rule_data['rule_name']}")
 
         # Send to Discord
         payload = {'content': message}
